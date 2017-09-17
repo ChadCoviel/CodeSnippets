@@ -33,7 +33,7 @@ Each code snippet can have a description for easier reference later on. The list
 
 Simply clone this repository and run the following command from within the directory:
 
-'''./node_modules/.bin/electron .'''
+```./node_modules/.bin/electron .```
 
 ## Future Plans/Changes
 
