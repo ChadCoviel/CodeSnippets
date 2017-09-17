@@ -31,7 +31,7 @@ Each code snippet can have a description for easier reference later on. The list
 
 ## Installation
 
-Simply clone this repository and run the following command from within the directory:
+You may not need it but make sure that you have Node installed. Simply clone this repository and run the following command from within the directory:
 
 ```./node_modules/.bin/electron .```
 
