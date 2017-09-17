@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CodeSnippets</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="index.css" rel="stylesheet"/>
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="node_modules/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="node_modules/codemirror/lib/codemirror.css"/>
+    <link rel="stylesheet" href="node_modules/codemirror/theme/dracula.css"/>
+  </head>
+  <body>
+    <div class="container" id="TopDiv">
+      <div class="row darken" id="codeSnippetModule">
+        <div class="col-sm-4" id="codeSnippetList">
+            <div>
+              <input placeholder="Search" id="search"/>
+            </div>
+            <ul id="codeSnippets" class="list">
+              <!--Script will allow me to dynamically change the list in my renderer javascript file-->
+              <script id="code-snippets-template" type="text/template">
+                {{#codeSnippets}}
+                      <li class="list">
+                        <div class="row">
+                          <div class="col-xs-10">
+                            <div>
+                              <span id="description">{{description}}</span>
+                            </div>
+                            <div>
+                              <span><i>{{language}}</i></span>
+                            </div>
+                            <div>
+                              <span>{{date}}</span>
+                            </div> 
+                          </div>
+                          <div class="col-xs-2" id="buttons">
+                            <button type="button" id="copy" class="btn btn-primary circular"><i class="fa fa-clipboard"></i></button>
+                            <button type="button" id="delete" class="btn btn-primary circular"><i class="fa fa-trash-o"></i></button>
+                            <button type="button" id="edit" class="btn btn-primary circular"><i class="fa fa-pencil-square-o"></i></button>
+                          </div>
+                        </div>
+                      </li>
+                {{/codeSnippets}}
+              </script>
+            </ul>
+        </div>
+        <div class="col-sm-8" id="codeSnippetData">
+          <div>
+            <textarea class="form-control darken" id="codeSnippetText" placeholder="Enter code snippet here..."></textarea>
+            <input class="form-control darken" type="text" id="description" placeholder="Enter description here...">
+          </div>
+          <div class="row no-gutters">
+            <div class="col-xs-8 no-padding" id="sum">
+              <!-- <input class="form-control darken" type="text" id="language" placeholder="Enter programming language used..."> -->
+               <select class="selectpicker show-tick form-control" id="language" data-live-search="true" title="choose language..." data-style="btn-primary">
+                <option>Java</option>
+                <option>Javascript</option>
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>Python</option>
+                <option>Ruby</option>
+                <option>.NET</option>
+                <option>SQL</option>
+                <option>C</option>
+                <option>C++</option>
+                <option>C#</option>
+                <option>Swift</option>
+                <option>Assembly</option>
+                <option>PHP</option>
+                <option>Fortran</option>
+                <option>Objective-C</option>
+                <option>MATLAB</option>
+                <option>Powershell</option>
+                <option>Pascal</option>
+                <option>Lisp</option>
+                <option>Scala</option>
+                <option>LaTeX</option>
+               </select>
+            </div>
+            <div class="col-xs-2 no-padding">
+              <button type="button" class="btn btn-primary left form-control" id="clear">Clear</button>
+            </div>
+            <div class="col-xs-2 no-padding" id="some">
+              <button type="button" class="btn btn-primary left form-control" id="save">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="node_modules/mustache/mustache.min.js"></script>
+    <script src="node_modules/codemirror/lib/codemirror.js"></script>
+    <script src="node_modules/codemirror/mode/clike/clike.js"></script>
+    <script src="node_modules/codemirror/mode/javascript/javascript.js"></script>
+    <script src="node_modules/codemirror/mode/swift/swift.js"></script>
+    <script src="node_modules/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="node_modules/codemirror/mode/fortran/fortran.js"></script>
+    <script src="node_modules/codemirror/mode/python/python.js"></script>
+    <script src="node_modules/codemirror/mode/ruby/ruby.js"></script>
+    <script src="node_modules/codemirror/mode/sql/sql.js"></script>
+    <script src="node_modules/codemirror/mode/css/css.js"></script>
+    <script src="node_modules/codemirror/mode/vb/vb.js"></script>
+    <script src="node_modules/codemirror/mode/xml/xml.js"></script>
+    <script src="node_modules/codemirror/mode/http/http.js"></script>
+    <script src="node_modules/codemirror/mode/gas/gas.js"></script>
+    <script src="node_modules/codemirror/mode/octave/octave.js"></script>
+    <script src="node_modules/codemirror/mode/php/php.js"></script>
+    <script src="node_modules/codemirror/mode/shell/shell.js"></script>
+    <script src="node_modules/codemirror/mode/pascal/pascal.js"></script>
+    <script src="node_modules/codemirror/mode/commonlisp/commonlisp.js"></script>
+    <script src="node_modules/codemirror/mode/stex/stex.js"></script>
+    <script src="node_modules/PubSub/dist/pubsub.min.js"></script>
+    <script>
+      (function() {
+        require('./app.js');
+      })();
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,14 @@
+{
+  "name": "Snippet-app",
+  "version": "0.1.0",
+  "main": "main.js",
+  "dependencies": {
+    "PubSub": "^3.2.7",
+    "bootstrap": "^3.3.7",
+    "bootstrap-select": "^1.12.4",
+    "codemirror": "^5.29.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "mustache": "^2.3.0"
+  }
+}
