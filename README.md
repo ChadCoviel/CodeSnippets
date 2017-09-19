@@ -1,7 +1,5 @@
 # CodeSnippets
 
-Author of this project: Chad Coviel 
-
 This is an app built using Electron that allows you to save code snippets in one place. The embedded CodeMirror module provides the syntax highlighting and I set it up to accomodate the most popular languages. There are many more but these are the ones that I currently have setup.:
 
 * Java 
@@ -43,3 +41,8 @@ You may not need it but make sure that you have Node installed. Simply clone thi
 * Improve the visual presentation. The current dracula theme is nice but I think css can make things look even better.
 * Add some keyboard shortcuts for quicksorting without manually clicking the buttons. Shortcuts for autofocusing specific elements would also be nice.
 * Many more once they come to mind...
+
+
+### Authors
+
+* Chad Coviel 
